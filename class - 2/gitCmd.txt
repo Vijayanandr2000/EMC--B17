@@ -1,0 +1,8 @@
+1. git init -> initail which create.git hidden folder
+
+2. git add <file-name> -> makeing to push in sw
+3. git commit -m "message" -> commit a message to the code changes
+4. git push -> push to the sw
+
+5. git fetch -> bring the updatedd data alone not a code changes
+6. git pull -> bring the code change
