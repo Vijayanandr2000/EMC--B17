@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* @media (conditio){
+
+        } */
+
+
+        @media (max-width: 546px) {
+            div {
+                background-color: green;
+            }
+        }
+
+        @media (max-width: 768px) and (min-width: 547px) {
+            div {
+                background-color: blue;
+            }
+
+            h1 {
+                color: brown;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 992px) {
+            div {
+                background-color: yellow;
+            }
+        }
+
+        @media (min-width: 993px) and (max-width: 1200px) {
+            div {
+                background-color: pink;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            div {
+                background-color: black;
+            }
+        }
+
+        /* @media (orientation: landscape) {
+            div {
+                background-color: grey;
+            }
+        }
+
+        @media (orientation: portrait) {
+            div {
+                background-color: rgb(251, 198, 5);
+            }
+        } */
+
+        @media print {
+            div {
+                /* background-color: black; */
+                color: red;
+                font-size: 20px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>Vijay</div>
+    <h1>Anand</h1>
+    <p>Kishore</p>
+
+</body>
+
+</html>

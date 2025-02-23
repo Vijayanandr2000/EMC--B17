@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Animation</title>
+    <style>
+        div {
+            border-radius: 50%;
+            background-color: red;
+            width: 20px;
+            height: 20px;
+            border: 1px solid black;
+            margin: 200px auto;
+            animation: bounce 1s infinite;
+
+        }
+
+        /* @keyframes identifier {
+            
+        } */
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(50px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
