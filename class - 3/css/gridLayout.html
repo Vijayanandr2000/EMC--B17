@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "entrance parking parking"
+                "br1 hall kitchen"
+                "br1 br2 staircase"
+            ;
+            gap: 10px;
+            grid-template-rows: repeat(3, minmax(100px, 1fr));
+            height: 90vh;
+            text-align: center;
+        }
+
+        .entrance {
+            grid-area: entrance;
+        }
+
+        .parking {
+            grid-area: parking;
+        }
+
+        .br1 {
+            grid-area: br1;
+        }
+
+        .hall {
+            grid-area: hall;
+        }
+
+        .kitchen {
+            grid-area: kitchen;
+        }
+
+        .br2 {
+            grid-area: br2;
+        }
+
+        .staircase {
+            grid-area: staircase;
+        }
+
+        .grid-item {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item entrance">entrance</div>
+        <div class="grid-item parking">parking</div>
+        <div class="grid-item br1">br1</div>
+        <div class="grid-item hall">hall</div>
+        <div class="grid-item kitchen">kitchen</div>
+        <div class="grid-item br2">br2</div>
+        <div class="grid-item staircase">staircase</div>
+    </div>
+
+</body>
+
+</html>
