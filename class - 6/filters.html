@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #product-list {
+            flex-grow: 1;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="filters">
+        <h1>Select by category</h1>
+        <label>
+            <input type="checkbox" class="filter" value="electronics">Electronics
+        </label><br>
+        <label>
+            <input type="checkbox" class="filter" value="cloths">Cloths
+        </label><br>
+        <label>
+            <input type="checkbox" class="filter" value="books">Books
+        </label>
+    </div>
+
+    <div id="product-list"></div>
+
+    <script>
+        const products = [
+            { category: 'electronics', name: 'Laptop', price: 1200 },
+            { category: 'cloths', name: 'Shirt', price: 50 },
+            { category: 'books', name: 'Book', price: 15 },
+            { category: 'electronics', name: 'Mobile', price: 800 },
+            { category: 'cloths', name: 'Pants', price: 100 },
+            { category: 'books', name: 'Magazine', price: 7 }
+        ];
+
+        const productList = document.getElementById('product-list');
+        const cbs = document.querySelectorAll(".filter")
+
+        function displayProducts(filteredProducts) {
+            productList.innerHTML = "";
+            filteredProducts.forEach(product => {
+                const h2 = document.createElement('h3');
+                h2.classList.add('product')
+                h2.textContent = product.name;
+                productList.appendChild(h2);
+            })
+        }
+
+        function filterProduct() {
+            let selectedCategory = [...cbs].filter((cb) => cb.checked).map((cb) => cb.value)
+
+            if (selectedCategory.length === 0) {
+                displayProducts(products)
+                return
+            } else {
+                let filteredProducts = products.filter(product => selectedCategory.includes(product.category))
+                console.log("filteredProducts", filteredProducts)
+                displayProducts(filteredProducts)
+                return
+            }
+        }
+
+        cbs.forEach(cb => cb.addEventListener("change", filterProduct))
+
+        displayProducts(products)
+    </script>
+
+</body>
+
+</html>
