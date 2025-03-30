@@ -1,0 +1,30 @@
+body {
+  padding: 20px;
+}
+
+.idCard {
+  /* border: 1px solid red; */
+
+  width: 300px;
+  text-align: center;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding: 20px;
+}
+
+h1 {
+  background-color: #4caf50;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  color: whitesmoke;
+}
+
+img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #054007;
+}
+
+img:hover {
+  scale: calc(1.3);
+}
