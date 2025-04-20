@@ -5,7 +5,12 @@ import Instruction from "./pages/Instruction";
 import Quiz from "./pages/Quiz";
 import Result from "./pages/Result";
 
+const env = (key) => {
+  return process.env[key] ?? null;
+};
+
 function App() {
+  console.log(process.env.API_KEY);
   return (
     <div className="App">
       <BrowserRouter>
