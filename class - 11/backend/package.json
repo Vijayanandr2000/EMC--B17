@@ -1,0 +1,17 @@
+{
+  "name": "login-app",
+  "version": "1.0.0",
+  "description": "The user can able to signup or login",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vijayanandr2000",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
